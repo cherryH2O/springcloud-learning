@@ -34,7 +34,7 @@ public class PaymentController {
         Payment payment = paymentService.getPaymentById(id);
         log.info("********插入结果："+payment);
         if (payment!=null) {
-            return new CommonResult(200, "查询成功, serverPort: "+ serverPort, payment);
+            return new CommonResult(200, "查询成功, serverPort: "+serverPort, payment);
         } else {
             return new CommonResult(200, "没有对应记录，查询ID："+id, null);
         }
